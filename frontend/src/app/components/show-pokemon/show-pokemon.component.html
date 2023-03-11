@@ -1,0 +1,24 @@
+<p class="black-text " *ngFor="let item of pokemons">
+    <ng-template [ngIf]="item.legendario">
+        <div class="poklegend grid-item">
+            {{item._id}} <br> <img [src]="url1 + item.numero.toString().padStart(3, '0') + url2">
+            {{item.nombre}} <br> {{item.numero}}<br>
+            {{item.generacion}} <br> {{item.region}}<br> {{item.tipo}} <br> {{item.evolucion}}<br>
+            {{item.legendario}} <br>{{item.cantidad}} <br> {{item.precio}}$
+        </div>
+    </ng-template>
+    <ng-template [ngIf]="!item.legendario">
+        <div class="grid-item">
+            {{item._id}} <br> <img [src]="url1+ item.numero.toString().padStart(3, '0')+url2"> {{item.nombre}}
+            <br> {{item.numero}}<br>
+            {{item.generacion}} <br> {{item.region}}<br> {{item.tipo}} <br> {{item.evolucion}}<br>
+            {{item.legendario}} <br>{{item.cantidad}} <br> {{item.precio}}$
+        </div>
+    </ng-template>
+    <button class="btn btn-primary btn-rounded-corners" (click)="deletePokemon(item)">
+        Eliminar Pokémon
+    </button>
+    <button class="btn btn-primary btn-rounded-corners">
+        Modificar Pokémon
+    </button>
+</p>

@@ -1,0 +1,8 @@
+<button class="btn btn-primary btn-rounded-corners add-button m-2" (click)="showform()">Buscar Pokémon</button>
+<div *ngIf="showformflag">
+    <input #nombre type="text" class="form-control has-background-light" placeholder="Nombre del Pokémon">
+    <button class="btn btn-primary m-2" (click)="getByName(nombre.value)">Buscar por nombre</button>
+
+    <input #ID type="text" class="form-control has-background-light" placeholder="ID del Pokémon">
+    <button class="btn btn-primary m-2" (click)="getByID(ID.value)">Buscar por ID</button>
+</div>

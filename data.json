@@ -1,0 +1,119 @@
+[
+    {
+        "nombre": "Pikachu",
+        "numero": 25,
+        "generacion": 1,
+        "region": "Kanto",
+        "tipo": "Eléctrico",
+        "evolucion": true,
+        "legendario": false,
+        "cantidad": 56,
+        "precio": 6969
+    },
+    {
+        "nombre": "Charizard",
+        "numero": 6,
+        "generacion": 1,
+        "region": "Kanto",
+        "tipo": [
+            "Fuego",
+            "Volador"
+        ],
+        "evolucion": false,
+        "legendario": false,
+        "cantidad": 23,
+        "precio": 15000
+    },
+    {
+        "nombre": "Gyarados",
+        "numero": 130,
+        "generacion": 1,
+        "region": "Kanto",
+        "tipo": [
+            "Agua",
+            "Volador"
+        ],
+        "evolucion": false,
+        "legendario": false,
+        "cantidad": 11,
+        "precio": 8000
+    },
+    {
+        "nombre": "Dragonite",
+        "numero": 149,
+        "generacion": 1,
+        "region": "Kanto",
+        "tipo": [
+            "Dragón",
+            "Volador"
+        ],
+        "evolucion": true,
+        "legendario": false,
+        "cantidad": 7,
+        "precio": 22000
+    },
+    {
+        "nombre": "Typhlosion",
+        "numero": 157,
+        "generacion": 2,
+        "region": "Johto",
+        "tipo": "Fuego",
+        "evolucion": false,
+        "legendario": false,
+        "cantidad": 34,
+        "precio": 12000
+    },
+    {
+        "nombre": "Ampharos",
+        "numero": 181,
+        "generacion": 2,
+        "region": "Johto",
+        "tipo": "Eléctrico",
+        "evolucion": false,
+        "legendario": false,
+        "cantidad": 18,
+        "precio": 9000
+    },
+    {
+        "nombre": "Swampert",
+        "numero": 260,
+        "generacion": 3,
+        "region": "Hoenn",
+        "tipo": [
+            "Agua",
+            "Tierra"
+        ],
+        "evolucion": false,
+        "legendario": false,
+        "cantidad": 15,
+        "precio": 17000
+    },
+    {
+        "nombre": "Blaziken",
+        "numero": 257,
+        "generacion": 3,
+        "region": "Hoenn",
+        "tipo": [
+            "Fuego",
+            "Lucha"
+        ],
+        "evolucion": false,
+        "legendario": false,
+        "cantidad": 9,
+        "precio": 21000
+    },
+    {
+        "nombre": "Lucario",
+        "numero": 448,
+        "generacion": 4,
+        "region": "Sinnoh",
+        "tipo": [
+            "Lucha",
+            "Acero"
+        ],
+        "evolucion": false,
+        "legendario": false,
+        "cantidad": 5,
+        "precio": 28000
+    }
+]

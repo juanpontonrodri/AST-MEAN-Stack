@@ -1,0 +1,12 @@
+<app-navbar></app-navbar>
+<div class="container mt-3">
+
+  <router-outlet></router-outlet>
+  <hr>
+  <app-add-pokemon></app-add-pokemon><app-get-pokemon></app-get-pokemon>
+  <button class="btn btn-primary btn-rounded-corners add-button m-2" (click)="activarShowPokemons()">Mostrar
+    Pokémon</button>
+  <hr>
+  <app-show-pokemon *ngIf="showPokemonVisible"></app-show-pokemon>
+
+</div>
