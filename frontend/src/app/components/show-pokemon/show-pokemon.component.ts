@@ -44,30 +44,25 @@ export class ShowPokemonComponent implements OnInit {
   modify(pokemon: Pokemon) {
     this.pokemonSeleccionado = pokemon;
     this.showmodifyflag = true;
-    this.rest = false;
+
   }
 
 
   modifyPokemon(_id: string, nombre: string, numero: number, generacion: number, region: string, tipo: string, evolucion: boolean, legendario: boolean, cantidad: number, precio: number) {
     this.showmodifyflag = false;
-    this.rest = true;
     this.PokemonService.putPokemon(_id, nombre, numero, generacion, region, tipo, evolucion, legendario, cantidad, precio)
       .subscribe(response => {
-        this.rest = false;
-
-        // You can access status:
         if (response.status == 200) {
-          this.success = true;
+          console.log("deleted true")
+          this.rstatus.emit(true);
+        } else {
+          console.log("deleted true")
+          this.rstatus.emit(false);
         }
-        else {
-          this.failure = true;
-        }
-
       });
   }
   cancelmodify() {
     this.showmodifyflag = false;
-    this.rest = true;
   }
   getBoolean(value: string) {
     switch (value) {

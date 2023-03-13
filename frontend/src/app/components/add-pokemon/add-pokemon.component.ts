@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import Pokemon from 'src/app/models/pokemon';
 import { PokemonService } from 'src/app/services/pokemon.service';
 
@@ -17,6 +17,7 @@ export class AddPokemonComponent {
   }
   ngOnInit(): void { }
 
+  @Output() rstatus = new EventEmitter<boolean>();
 
 
   showform() {
@@ -30,7 +31,15 @@ export class AddPokemonComponent {
   addPokemon(nombre: string, numero: number, generacion: number, region: string, tipo: string, evolucion: boolean, legendario: boolean, cantidad: number, precio: number) {
     this.showformflag = false;
     this.PokemonService.createPokemon(nombre, numero, generacion, region, tipo, evolucion, legendario, cantidad, precio)
-      .subscribe(() => { this.ngOnInit() });
+      .subscribe(response => {
+        if (response.status == 200) {
+          console.log("deleted true")
+          this.rstatus.emit(true);
+        } else {
+          console.log("deleted true")
+          this.rstatus.emit(false);
+        }
+      });
   }
 
   getBoolean(value: string) {
