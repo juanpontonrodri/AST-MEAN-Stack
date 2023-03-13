@@ -11,6 +11,7 @@ export class AddPokemonComponent {
 
   showformflag = false
   tipoPokemon: string[] = [];
+  numero: number | undefined
 
   constructor(private PokemonService: PokemonService) {
 

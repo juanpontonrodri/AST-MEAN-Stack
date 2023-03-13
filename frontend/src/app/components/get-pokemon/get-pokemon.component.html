@@ -9,7 +9,7 @@
 <div *ngIf="showresults">
     <p class="black-text " *ngFor="let item of pokemons">
         <ng-template [ngIf]="item.legendario">
-            <div class="poklegend grid-item">
+            <div class="legendary grid-item">
                 {{item._id}} <br> <img [src]="url1 + item.numero.toString().padStart(3, '0') + url2">
                 {{item.nombre}} <br> {{item.numero}}<br>
                 {{item.generacion}} <br> {{item.region}}<br> {{item.tipo}} <br> {{item.evolucion}}<br>

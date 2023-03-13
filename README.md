@@ -8,7 +8,7 @@ Versiones recomendadas node:18.12 angular:15.2 npm :npm install -g npm@9.5.1
 Falta:
 
 -Limitar tamaño campos como numero
--Lo de que los legendarios brillen
+-Indicar que es cada campo en las descripciones
 -Q solo se vea la imagen y al poner el poner el raton encima aparazeca nombre y caracteristicas o al clickar, cualquiera vale.
 
 Preguntas:
