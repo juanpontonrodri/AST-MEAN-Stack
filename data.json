@@ -33,26 +33,37 @@
         "precio": 8000
     },
     {
-        "nombre": "Dragonite",
-        "numero": 149,
+        "nombre": "Articuno",
+        "numero": 144,
         "generacion": 1,
         "region": "Kanto",
-        "tipo": "Dragón",
-        "evolucion": true,
-        "legendario": false,
-        "cantidad": 7,
-        "precio": 22000
+        "tipo": "Hielo/Volador",
+        "evolucion": false,
+        "legendario": true,
+        "cantidad": 1,
+        "precio": 50000
     },
     {
-        "nombre": "Typhlosion",
-        "numero": 157,
-        "generacion": 2,
-        "region": "Johto",
-        "tipo": "Fuego",
+        "nombre": "Mewtwo",
+        "numero": 150,
+        "generacion": 1,
+        "region": "Kanto",
+        "tipo": "Psíquico",
         "evolucion": false,
-        "legendario": false,
-        "cantidad": 34,
-        "precio": 12000
+        "legendario": true,
+        "cantidad": 1,
+        "precio": 100000
+    },
+    {
+        "nombre": "Groudon",
+        "numero": 383,
+        "generacion": 3,
+        "region": "Hoenn",
+        "tipo": "Tierra",
+        "evolucion": false,
+        "legendario": true,
+        "cantidad": 1,
+        "precio": 75000
     },
     {
         "nombre": "Ampharos",

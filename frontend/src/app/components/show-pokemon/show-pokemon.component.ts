@@ -9,11 +9,7 @@ import { PokemonService } from 'src/app/services/pokemon.service';
 })
 export class ShowPokemonComponent implements OnInit {
   pokemonSeleccionado!: Pokemon
-  modificando = false
   showmodifyflag = false
-  rest = true
-  success = false
-  failure = false
   pokemons: Pokemon[] = [];
   url1: string = "https://assets.pokemon.com/assets/cms2/img/pokedex/full/";
   url2: string = ".png";

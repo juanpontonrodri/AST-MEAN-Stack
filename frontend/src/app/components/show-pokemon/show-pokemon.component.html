@@ -109,7 +109,7 @@
     <input #pokemonInput9 [(ngModel)]="pokemonSeleccionado.precio" type="number"
         class="form-control has-background-light" placeholder="Enter price">
     <br>
-    <button class="btn " (click)="cancelmodify()"> Cancel</button>
+    <button class="btn " (click)="cancelmodify()"> Cancelar</button>
     <button class="btn btn-primary"
         (click)="modifyPokemon(pokemonSeleccionado._id,pokemonInput1.value, pokemonInput2.valueAsNumber, +pokemonInput3.value, pokemonInput4.value, pokemonInput5.value, getBoolean(pokemonInput6.value), getBoolean(pokemonInput7.value)!, pokemonInput8.valueAsNumber, pokemonInput9.valueAsNumber)">Modify</button>
 </div>

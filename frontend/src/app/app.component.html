@@ -6,7 +6,7 @@
 
   <div *ngIf="!showmessage">
     <app-add-pokemon (rstatus)="onrstatus($event)"></app-add-pokemon>
-    <app-get-pokemon></app-get-pokemon>
+    <app-get-pokemon (rstatus)="onrstatus($event)"></app-get-pokemon>
     <button class="btn btn-primary btn-rounded-corners add-button m-2" (click)="activarShowPokemons()">Mostrar
       Pokémon</button>
     <hr>
@@ -15,10 +15,10 @@
 
   <div class="grid-container">
     <div *ngIf="success">
-      The operation was successful!
+      La operación se ha realizado con éxito
       <button class="btn btn-primary btn-rounded-corners add-button m-2" (click)="cancelmessage()">OK</button>
     </div>
     <div *ngIf="failure">
-      The operation has Failed!
+      La operación no se ha podido realizar con éxito
       <button class="btn btn-primary btn-rounded-corners add-button m-2" (click)="cancelmessage()">OK</button>
     </div>

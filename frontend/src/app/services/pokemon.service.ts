@@ -15,17 +15,18 @@ export class PokemonService {
 
 
   getPokemons() {
-    return this.webService.get('api/pokemon');
+    return this.webService.get(`api/pokemon`);
   }
+
   getPokemonByID(_id: string) {
-    return this.webService.get('api/pokemon/id/${_id}')
+    return this.webService.get(`api/pokemon/id/${_id}`)
   }
   getPokemonByName(_name: string) {
-    return this.webService.get('api/pokemon/name/${_name}')
+    return this.webService.get(`api/pokemon/nombre/${_name}`)
   }
   createPokemon(nombre: String, numero: Number, generacion: Number, region: string, tipo: string, evolucion: boolean, legendario: boolean, cantidad: number, precio: number) {
 
-    return this.webService.post('api/pokemon', { nombre, numero, generacion, region, tipo, evolucion, legendario, cantidad, precio })
+    return this.webService.post(`api/pokemon`, { nombre, numero, generacion, region, tipo, evolucion, legendario, cantidad, precio })
   }
   deletePokemon(_id: string) {
     return this.webService.delete(`api/pokemon/id/${_id}`);
