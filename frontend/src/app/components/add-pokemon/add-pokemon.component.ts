@@ -33,10 +33,10 @@ export class AddPokemonComponent {
     this.PokemonService.createPokemon(nombre, numero, generacion, region, tipo, evolucion, legendario, cantidad, precio)
       .subscribe(response => {
         if (response.status == 200) {
-          console.log("deleted true")
+          console.log("dadded true")
           this.rstatus.emit(true);
         } else {
-          console.log("deleted true")
+          console.log("added true")
           this.rstatus.emit(false);
         }
       });

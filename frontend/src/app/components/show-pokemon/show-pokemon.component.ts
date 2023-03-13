@@ -53,10 +53,10 @@ export class ShowPokemonComponent implements OnInit {
     this.PokemonService.putPokemon(_id, nombre, numero, generacion, region, tipo, evolucion, legendario, cantidad, precio)
       .subscribe(response => {
         if (response.status == 200) {
-          console.log("deleted true")
+          console.log("event true")
           this.rstatus.emit(true);
         } else {
-          console.log("deleted true")
+          console.log("event true")
           this.rstatus.emit(false);
         }
       });
