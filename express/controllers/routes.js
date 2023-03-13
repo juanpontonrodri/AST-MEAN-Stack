@@ -1,6 +1,7 @@
 
 var mongoose = require("mongoose");
 var Pokemon = mongoose.model("pokemon");
+const ObjectId = require('mongodb').ObjectId;
 
 //GET - Return all pokemon in the DB
 exports.findAllpokemon = function (req, res) {
@@ -26,6 +27,7 @@ exports.findByName = function (req, res) {
   Pokemon.find({ nombre: nombre }, (err, pokemon) => {
     if (err) return res.status(500, err.message);
     console.log('GET /pokemon/nombre/' + req.params.nombre);
+    console.log(req.body);
     res.status(200).jsonp(pokemon);
   })
 }
@@ -44,47 +46,20 @@ exports.addpokemon = function (req, res) {
   });
 };
 
-/* //POST PERO SOLO SERVIA CON UN POKEMON, el de ahora va con varios a la vez
-exports.addpokemon = function (req, res) {
-  console.log("POST");
-  console.log(req.body);
-
-  var pokemon = new Pokemon({
-    nombre: req.body.nombre,
-    numero: req.body.numero,
-    generacion: req.body.generacion,
-    region: req.body.region,
-    tipo: req.body.tipo,
-    evolucion: req.body.evolucion,
-    legendario: req.body.legendario,
-    cantidad: req.body.cantidad,
-    precio: req.body.precio,
-  });
-
-  pokemon.save(function (err, pokemon) {
-    if (err) return res.status(500).send(err.message);
-    res.status(200).jsonp(pokemon);
-  });
-}; */
-
 
 //PUT - Update a register already exists
 exports.updatepokemon = function (req, res) {
-  Pokemon.findById(req.params.id, function (err, pokemon) {
-    pokemon.nombre = req.body.petId;
-    pokemon.numero = req.body.numero;
-    pokemon.generacion = req.body.generacion;
-    pokemon.region = req.body.region;
-    pokemon.tipo = req.body.tipo;
-    pokemon.evolucion = req.body.evolucion;
-    pokemon.legendario = req.body.legendario;
-    pokemon.cantidad = req.body.cantidad,
-      pokemon.precio = req.body.precio,
-      pokemon._pokemonId = req.params.id,
-      pokemon.save(function (err) {
-        if (err) return res.status(500).send(err.message);
-        res.status(200).jsonp(pokemon);
-      });
+  console.log("PUT");
+  console.log(req.body);
+
+  let id = { _id: req.params.id };
+  // let result = await Pokemon.deleteOne({ _id: id })
+  var pokemonArr = req.body;
+
+  Pokemon.updateOne(id, pokemonArr, function (err, pokemon) {
+    if (err) return res.status(500).send(err.message);
+    res.status(200).jsonp(pokemon);
+
   });
 };
 
