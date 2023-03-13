@@ -1,7 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { AddPokemonComponent } from './add-pokemon/add-pokemon.component';
 import { GetPokemonComponent } from './get-pokemon/get-pokemon.component';
+import { ModifyPokemonComponent } from './modify-pokemon/modify-pokemon.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ShowPokemonComponent } from './show-pokemon/show-pokemon.component';
 
@@ -12,10 +14,12 @@ import { ShowPokemonComponent } from './show-pokemon/show-pokemon.component';
     NavbarComponent,
     AddPokemonComponent,
     ShowPokemonComponent,
-    GetPokemonComponent
+    GetPokemonComponent,
+    ModifyPokemonComponent
   ],
   imports: [
     CommonModule,
+    FormsModule
   ],
   exports: [
     NavbarComponent,

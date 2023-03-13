@@ -3,10 +3,22 @@
 
   <router-outlet></router-outlet>
   <hr>
-  <app-add-pokemon></app-add-pokemon><app-get-pokemon></app-get-pokemon>
-  <button class="btn btn-primary btn-rounded-corners add-button m-2" (click)="activarShowPokemons()">Mostrar
-    Pokémon</button>
-  <hr>
-  <app-show-pokemon *ngIf="showPokemonVisible"></app-show-pokemon>
 
-</div>
+  <div *ngIf="!showmessage">
+    <app-add-pokemon></app-add-pokemon>
+    <app-get-pokemon></app-get-pokemon>
+    <button class="btn btn-primary btn-rounded-corners add-button m-2" (click)="activarShowPokemons()">Mostrar
+      Pokémon</button>
+    <hr>
+    <app-show-pokemon (rstatus)="onrstatus($event)" *ngIf="showPokemonVisible"></app-show-pokemon>
+  </div>
+
+  <div class="grid-container">
+    <div *ngIf="success">
+      The operation was successful!
+      <button class="btn btn-primary btn-rounded-corners add-button m-2" (click)="cancelmessage()">OK</button>
+    </div>
+    <div *ngIf="failure">
+      The operation has Failed!
+      <button class="btn btn-primary btn-rounded-corners add-button m-2" (click)="cancelmessage()">OK</button>
+    </div>

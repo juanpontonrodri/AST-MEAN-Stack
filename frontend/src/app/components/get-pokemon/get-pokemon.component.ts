@@ -12,12 +12,12 @@ export class GetPokemonComponent implements OnInit {
 
   showformflag = false
 
+
   constructor(private PokemonService: PokemonService) {
 
   }
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
+  ngOnInit(): void { }
+
   getByName(name: string) {
     this.showformflag = false;
     this.PokemonService.getPokemonByName(name).subscribe(() => { });

@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { response } from 'express';
-import { map } from 'rxjs';
 import Pokemon from '../models/pokemon';
 import { WebService } from './webservice.service';
 
@@ -9,6 +8,9 @@ import { WebService } from './webservice.service';
 })
 export class PokemonService {
 
+  public rest = true
+  public success = false
+  public failure = false
   constructor(private webService: WebService) { }
 
 
@@ -21,7 +23,7 @@ export class PokemonService {
   getPokemonByName(_name: string) {
     return this.webService.get('api/pokemon/name/${_name}')
   }
-  createPokemon(nombre: String, numero: Number, generacion: Number, region: string, tipo: [string, string], evolucion: boolean, legendario: boolean, cantidad: number, precio: number) {
+  createPokemon(nombre: String, numero: Number, generacion: Number, region: string, tipo: string, evolucion: boolean, legendario: boolean, cantidad: number, precio: number) {
 
     return this.webService.post('api/pokemon', { nombre, numero, generacion, region, tipo, evolucion, legendario, cantidad, precio })
   }

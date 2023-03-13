@@ -7,7 +7,7 @@ import { PokemonService } from 'src/app/services/pokemon.service';
   templateUrl: './add-pokemon.component.html',
   styleUrls: ['./add-pokemon.component.css']
 })
-export class AddPokemonComponent implements OnInit {
+export class AddPokemonComponent {
 
   showformflag = false
   tipoPokemon: string[] = [];
@@ -15,9 +15,9 @@ export class AddPokemonComponent implements OnInit {
   constructor(private PokemonService: PokemonService) {
 
   }
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
+  ngOnInit(): void { }
+
+
 
   showform() {
     if (this.showformflag == false) {
@@ -27,7 +27,7 @@ export class AddPokemonComponent implements OnInit {
   cancelform() {
     this.showformflag = false;
   }
-  addPokemon(nombre: string, numero: number, generacion: number, region: string, tipo: [string, string], evolucion: boolean, legendario: boolean, cantidad: number, precio: number) {
+  addPokemon(nombre: string, numero: number, generacion: number, region: string, tipo: string, evolucion: boolean, legendario: boolean, cantidad: number, precio: number) {
     this.showformflag = false;
     this.PokemonService.createPokemon(nombre, numero, generacion, region, tipo, evolucion, legendario, cantidad, precio)
       .subscribe(() => { this.ngOnInit() });

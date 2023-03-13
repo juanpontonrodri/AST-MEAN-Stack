@@ -15,10 +15,7 @@
         "numero": 6,
         "generacion": 1,
         "region": "Kanto",
-        "tipo": [
-            "Fuego",
-            "Volador"
-        ],
+        "tipo": "Fuego",
         "evolucion": false,
         "legendario": false,
         "cantidad": 23,
@@ -29,10 +26,7 @@
         "numero": 130,
         "generacion": 1,
         "region": "Kanto",
-        "tipo": [
-            "Agua",
-            "Volador"
-        ],
+        "tipo": "Agua",
         "evolucion": false,
         "legendario": false,
         "cantidad": 11,
@@ -43,10 +37,7 @@
         "numero": 149,
         "generacion": 1,
         "region": "Kanto",
-        "tipo": [
-            "Dragón",
-            "Volador"
-        ],
+        "tipo": "Dragón",
         "evolucion": true,
         "legendario": false,
         "cantidad": 7,
@@ -79,10 +70,7 @@
         "numero": 260,
         "generacion": 3,
         "region": "Hoenn",
-        "tipo": [
-            "Agua",
-            "Tierra"
-        ],
+        "tipo": "Agua",
         "evolucion": false,
         "legendario": false,
         "cantidad": 15,
@@ -93,10 +81,7 @@
         "numero": 257,
         "generacion": 3,
         "region": "Hoenn",
-        "tipo": [
-            "Fuego",
-            "Lucha"
-        ],
+        "tipo": "Fuego",
         "evolucion": false,
         "legendario": false,
         "cantidad": 9,
@@ -107,10 +92,7 @@
         "numero": 448,
         "generacion": 4,
         "region": "Sinnoh",
-        "tipo": [
-            "Lucha",
-            "Acero"
-        ],
+        "tipo": "Lucha",
         "evolucion": false,
         "legendario": false,
         "cantidad": 5,
