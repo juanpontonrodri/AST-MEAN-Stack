@@ -1,16 +1,16 @@
 <app-navbar></app-navbar>
 <div class="container mt-3">
-
   <router-outlet></router-outlet>
   <hr>
-
-  <div *ngIf="!showmessage">
-    <app-add-pokemon (rstatus)="onrstatus($event)"></app-add-pokemon>
-    <app-get-pokemon (rstatus)="onrstatus($event)"></app-get-pokemon>
-    <button class="btn btn-primary btn-rounded-corners add-button m-2" (click)="activarShowPokemons()">Mostrar
-      Pokémon</button>
-    <hr>
-    <app-show-pokemon (rstatus)="onrstatus($event)" *ngIf="showPokemonVisible"></app-show-pokemon>
+  <div class="row">
+    <div class="col text-center">
+      <button class="btn btn-primary btn-rounded-corners add-button m-2" (click)="activarShowPokemons()">Mostrar Todos Pokémon</button>
+      <app-add-pokemon (rstatus)="onrstatus($event)" (click)="desactivarMostrar()"></app-add-pokemon>
+      <app-get-pokemon (rstatus)="onrstatus($event)" (click)="desactivarMostrar()"></app-get-pokemon>
+    </div>
+  </div>
+  <hr>
+  <app-show-pokemon (rstatus)="onrstatus($event)" *ngIf="showPokemonVisible"></app-show-pokemon>
   </div>
 
   <div class="grid-container">
@@ -21,4 +21,5 @@
     <div *ngIf="failure">
       La operación no se ha podido realizar con éxito
       <button class="btn btn-primary btn-rounded-corners add-button m-2" (click)="cancelmessage()">OK</button>
+    </div>
     </div>

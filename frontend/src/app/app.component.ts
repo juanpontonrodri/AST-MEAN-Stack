@@ -38,5 +38,9 @@ export class AppComponent {
     } else this.showPokemonVisible = false;
   }
 
+  desactivarMostrar(){
+    this.showPokemonVisible=false;
+  }
+
 }
 

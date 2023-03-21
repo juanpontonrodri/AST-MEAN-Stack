@@ -1,19 +1,14 @@
-<div *ngIf="!showmodifyflag">
+<div *ngIf="!showmodifyflag" class="grid-container">
     <p class="black-text " *ngFor="let item of pokemons">
         <ng-template [ngIf]="item.legendario">
             <div class="legendary grid-item">
-                {{item._id}} <br> <img [src]="url1 + item.numero.toString().padStart(3, '0') + url2">
-                {{item.nombre}} <br> {{item.numero}}<br>
-                {{item.generacion}} <br> {{item.region}}<br> {{item.tipo}} <br> {{item.evolucion}}<br>
-                {{item.legendario}} <br>{{item.cantidad}} <br> {{item.precio}}$
+                ID:{{item._id}}  <br> <img [src]="url1 + item.numero.toString().padStart(3, '0') + url2" width="300" height="300"> <br> Nombre:{{item.nombre}}   <br> Número:{{item.numero}}<br> Generación:{{item.generacion}} <br> Región:{{item.region}}<br> Tipo:{{item.tipo}} <br> ¿Evoluciona?:{{item.evolucion}}<br> ¿Legendario?:{{item.legendario}} <br>Cantidad:{{item.cantidad}} <br> Precio:{{item.precio}}$
             </div>
         </ng-template>
         <ng-template [ngIf]="!item.legendario">
             <div class="grid-item">
-                {{item._id}} <br> <img [src]="url1+ item.numero.toString().padStart(3, '0')+url2"> {{item.nombre}}
-                <br> {{item.numero}}<br>
-                {{item.generacion}} <br> {{item.region}}<br> {{item.tipo}} <br> {{item.evolucion}}<br>
-                {{item.legendario}} <br>{{item.cantidad}} <br> {{item.precio}}$
+                ID:{{item._id}}  <br> <img [src]="url1 + item.numero.toString().padStart(3, '0') + url2" width="300" height="300"> <br> Nombre:{{item.nombre}}   <br> Número:{{item.numero}}<br> Generación:{{item.generacion}} <br> Región:{{item.region}}<br> Tipo:{{item.tipo}} <br> ¿Evoluciona?:{{item.evolucion}}<br> ¿Legendario?:{{item.legendario}} <br>Cantidad:{{item.cantidad}} <br> Precio:{{item.precio}}$
+
             </div>
         </ng-template>
         <button class="btn btn-primary btn-rounded-corners m-2" (click)="deletePokemon(item)">
@@ -23,8 +18,6 @@
             Modificar Pokémon
         </button>
 </div>
-
-
 
 
 
@@ -109,7 +102,7 @@
     <input #pokemonInput9 [(ngModel)]="pokemonSeleccionado.precio" type="number"
         class="form-control has-background-light" placeholder="Enter price">
     <br>
-    <button class="btn " (click)="cancelmodify()"> Cancelar</button>
-    <button class="btn btn-primary"
+    <button class="btn m-2" (click)="cancelmodify()"> Cancelar</button>
+    <button class="btn btn-primary m-2"
         (click)="modifyPokemon(pokemonSeleccionado._id,pokemonInput1.value, pokemonInput2.valueAsNumber, +pokemonInput3.value, pokemonInput4.value, pokemonInput5.value, getBoolean(pokemonInput6.value), getBoolean(pokemonInput7.value)!, pokemonInput8.valueAsNumber, pokemonInput9.valueAsNumber)">Modify</button>
 </div>

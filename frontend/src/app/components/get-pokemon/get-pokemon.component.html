@@ -5,23 +5,21 @@
 
     <input #ID type="text" class="form-control has-background-light" placeholder="ID del Pokémon">
     <button class="btn btn-primary m-2" (click)="getByID(ID.value)">Buscar por ID</button>
+    <button class="btn m-2" style="border: 2px solid black; border-radius: 5px; padding: 5px 10px; background-color: white; color: black;" (click)="showform()">Cancelar</button>
 </div>
-<div *ngIf="showresults">
+
+
+<div *ngIf="showresults"class="grid-container">
     <p class="black-text " *ngFor="let item of pokemons">
         <ng-template [ngIf]="item.legendario">
             <div class="legendary grid-item">
-                {{item._id}} <br> <img [src]="url1 + item.numero.toString().padStart(3, '0') + url2">
-                {{item.nombre}} <br> {{item.numero}}<br>
-                {{item.generacion}} <br> {{item.region}}<br> {{item.tipo}} <br> {{item.evolucion}}<br>
-                {{item.legendario}} <br>{{item.cantidad}} <br> {{item.precio}}$
+                ID:{{item._id}}  <br> <img [src]="url1 + item.numero.toString().padStart(3, '0') + url2" width="300" height="300"> <br> Nombre:{{item.nombre}}   <br> Número:{{item.numero}}<br> Generación:{{item.generacion}} <br> Región:{{item.region}}<br> Tipo:{{item.tipo}} <br> ¿Evoluciona?:{{item.evolucion}}<br> ¿Legendario?:{{item.legendario}} <br>Cantidad:{{item.cantidad}} <br> Precio:{{item.precio}}$
             </div>
         </ng-template>
         <ng-template [ngIf]="!item.legendario">
             <div class="grid-item">
-                {{item._id}} <br> <img [src]="url1+ item.numero.toString().padStart(3, '0')+url2"> {{item.nombre}}
-                <br> {{item.numero}}<br>
-                {{item.generacion}} <br> {{item.region}}<br> {{item.tipo}} <br> {{item.evolucion}}<br>
-                {{item.legendario}} <br>{{item.cantidad}} <br> {{item.precio}}$
+                ID:{{item._id}}  <br> <img [src]="url1 + item.numero.toString().padStart(3, '0') + url2" width="300" height="300"> <br> Nombre:{{item.nombre}}   <br> Número:{{item.numero}}<br> Generación:{{item.generacion}} <br> Región:{{item.region}}<br> Tipo:{{item.tipo}} <br> ¿Evoluciona?:{{item.evolucion}}<br> ¿Legendario?:{{item.legendario}} <br>Cantidad:{{item.cantidad}} <br> Precio:{{item.precio}}$
+
             </div>
         </ng-template>
         <button class="btn btn-primary btn-rounded-corners m-2" (click)="deletePokemon(item)">
@@ -30,6 +28,7 @@
         <button class="btn btn-primary btn-rounded-corners m-2" (click)="modify(item)">
             Modificar Pokémon
         </button>
+
 </div>
 
 

@@ -22,10 +22,12 @@ export class GetPokemonComponent implements OnInit {
 
   }
   ngOnInit(): void {
+    this.pokemons=[]
     this.showresults = false
   }
 
   getByName(name: string) {
+    this.pokemons=[]
     this.showformflag = false;
     this.showresults = true;
     this.PokemonService.getPokemonByName(name).subscribe((response: any) => {
@@ -39,6 +41,7 @@ export class GetPokemonComponent implements OnInit {
 
 
   getByID(id: string) {
+    this.pokemons=[]
     this.showformflag = false;
     this.showresults = true;
     this.PokemonService.getPokemonByID(id).subscribe((response: any) => {
@@ -48,6 +51,7 @@ export class GetPokemonComponent implements OnInit {
 
 
   showform() {
+    this.pokemons=[]//testearlo
     if (this.showformflag == false) {
       this.showresults = false
       this.showformflag = true;
