@@ -9,6 +9,12 @@ Versiones recomendadas node:18.12 angular:15.2 npm :npm install -g npm@9.5.1
 Falta:
 -Purebas intensas
 
+Pruebas:
+-Eliminar
+-Añadir
+-modificar
+-Buscar por id y nombre
+-tambien apagadno y viendo q no funciona
 
 Direccion para hacer post y get: http://localhost:3000/api/pokemon
 

@@ -1,5 +1,5 @@
 <app-navbar></app-navbar>
-<div class="container mt-3">
+<div class="container mt-3" *ngIf="!success">
   <router-outlet></router-outlet>
   <hr>
   <div class="row">
@@ -13,7 +13,7 @@
   <app-show-pokemon (rstatus)="onrstatus($event)" *ngIf="showPokemonVisible"></app-show-pokemon>
   </div>
 
-  <div class="grid-container">
+  <div class="container mt-3">
     <div *ngIf="success">
       La operación se ha realizado con éxito
       <button class="btn btn-primary btn-rounded-corners add-button m-2" (click)="cancelmessage()">OK</button>
