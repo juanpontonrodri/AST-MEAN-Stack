@@ -1,5 +1,6 @@
 <button class="btn btn-primary btn-rounded-corners add-button m-2" (click)="showform()">Añadir Pokémon</button>
 <div *ngIf="showformflag">
+    <p>¡Debes introducir todos los campos!</p>
     <input #pokemonInput1 type="text" class="form-control has-background-light" placeholder="Nombre del Pokémon">
     <input #pokemonInput2 type="number" class="form-control has-background-light" placeholder="Número del Pokémon">
 
