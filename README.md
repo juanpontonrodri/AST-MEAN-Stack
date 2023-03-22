@@ -9,9 +9,6 @@ Versiones recomendadas node:18.12 angular:15.2 npm :npm install -g npm@9.5.1
 Falta:
 -Purebas intensas
 
-Preguntas:
--Si el id no existe no meustra nada
--Cuando modificamos con el server apagado, en angular se guarda y se muestra, aunque en la base de datos no
 
 Direccion para hacer post y get: http://localhost:3000/api/pokemon
 
