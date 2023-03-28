@@ -1,0 +1,4 @@
+{"_id":{"$oid":"641ad927774bcc47ddee4335"},"nombre":"Gyarados","numero":130,"generacion":1,"region":"Kanto","tipo":"Agua","evolucion":false,"legendario":false,"cantidad":11,"precio":8000,"__v":0}
+{"_id":{"$oid":"641ad927774bcc47ddee4337"},"nombre":"Mewtwo","numero":150,"generacion":1,"region":"Kanto","tipo":"Psiquico","evolucion":false,"legendario":true,"cantidad":1,"precio":100000,"__v":0}
+{"_id":{"$oid":"641ad927774bcc47ddee433c"},"nombre":"Lucario","numero":448,"generacion":4,"region":"Sinnoh","tipo":"Lucha","evolucion":false,"legendario":false,"cantidad":5,"precio":28000,"__v":0}
+{"_id":{"$oid":"641ad99b774bcc47ddee4343"},"nombre":"Charizard","numero":3,"generacion":3,"region":"Johto","tipo":"Acero","evolucion":true,"legendario":true,"cantidad":4,"precio":2,"__v":0}
