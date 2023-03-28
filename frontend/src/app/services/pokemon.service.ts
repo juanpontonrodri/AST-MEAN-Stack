@@ -24,6 +24,9 @@ export class PokemonService {
   getPokemonByName(_name: string) {
     return this.webService.get(`api/pokemon/nombre/${_name}`)
   }
+  getPokemonByPrice(_price: number) {
+    return this.webService.get(`api/pokemon/precio/${_price}`)
+  }
   createPokemon(nombre: String, numero: Number, generacion: Number, region: string, tipo: string, evolucion: boolean, legendario: boolean, cantidad: number, precio: number) {
 
     return this.webService.post(`api/pokemon`, { nombre, numero, generacion, region, tipo, evolucion, legendario, cantidad, precio })

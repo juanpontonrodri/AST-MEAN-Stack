@@ -39,6 +39,19 @@ export class GetPokemonComponent implements OnInit {
     });
   }
 
+/*   getByPrice(precio: string) {
+    this.pokemons=[]
+    this.showformflag = false;
+    this.showresults = true;
+    this.PokemonService.getPokemonByPrice(parseInt(precio)).subscribe((response: any) => {
+      if (Array.isArray(response)) {
+        this.pokemons = response; // La respuesta es un arreglo de Pokemon
+      } else {
+        this.pokemons = [response]; // La respuesta es un solo Pokemon
+      }
+    });
+  } */
+
 
   getByID(id: string) {
     this.pokemons=[]

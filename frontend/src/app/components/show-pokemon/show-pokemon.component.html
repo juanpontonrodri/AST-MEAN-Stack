@@ -23,7 +23,7 @@
 
 <div *ngIf="showmodifyflag" class="grid-item">
     <label>Nombre:</label>
-    <input #pokemonInput1 [(ngModel)]="pokemonSeleccionado.nombre" name="nombre" type="text">
+    <input #pokemonInput1 [(ngModel)]="pokemonSeleccionado.nombre" name="nombre" type="text"> <!--metemos disbaled dentro y para evitar sincronziacion metemos value en vez de ng model-->
     <br>
     <label>Numero:</label>
     <input #pokemonInput2 [(ngModel)]="pokemonSeleccionado.numero" name="numero" type="number">

@@ -31,6 +31,16 @@ exports.findByName = function (req, res) {
     res.status(200).jsonp(pokemon);
   })
 }
+/* exports.findByPrice = function (req, res) {
+  var precio = parseFloat(req.params.precio);
+  Pokemon.find({ precio: { $gt: precio } }, (err, pokemons) => { //menor o igual: $lte
+    if (err) return res.status(500, err.message);
+    console.log('GET /pokemon/precio/' + req.params.precio);
+    console.log(req.body);
+    res.status(200).jsonp(pokemons);
+  });
+};
+ */
 
 
 //POST - Insert new pokemon(s) in the DB

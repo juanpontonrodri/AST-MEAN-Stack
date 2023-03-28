@@ -2,7 +2,10 @@
 <div *ngIf="showformflag">
     <input #nombre type="text" class="form-control has-background-light" placeholder="Nombre del Pokémon">
     <button class="btn btn-primary m-2" (click)="getByName(nombre.value)">Buscar por nombre</button>
-
+<!-- 
+    <input #precio type="text" class="form-control has-background-light" placeholder="Precio del Pokémon">
+    <button class="btn btn-primary m-2" (click)="getByPrice(precio.value)">Buscar por precio</button>
+     -->
     <input #ID type="text" class="form-control has-background-light" placeholder="ID del Pokémon">
     <button class="btn btn-primary m-2" (click)="getByID(ID.value)">Buscar por ID</button>
     <button class="btn m-2" style="border: 2px solid black; border-radius: 5px; padding: 5px 10px; background-color: white; color: black;" (click)="showform()">Cancelar</button>

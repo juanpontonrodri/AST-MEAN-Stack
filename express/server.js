@@ -64,10 +64,14 @@ router.route('/pokemon')
 router.route('/pokemon/nombre/:nombre')
     .get(pokemonroute.findByName) // Devuelve un pokemon por su nombre.
 
+/* router.route('/pokemon/precio/:precio')
+    .get(pokemonroute.findByPrice) // Devuelve un pokemon por su nombre.
+ */
 router.route('/pokemon/id/:id')
     .get(pokemonroute.findById) // Devuelve un pokemon por su ID.
     .put(pokemonroute.updatepokemon) // Actualiza un pokemon existente.
     .delete(pokemonroute.deletePokemon); // Elimina un pokemon existente.
+
 
 // Agregamos las rutas definidas anteriormente a nuestra aplicación.
 app.use('/api', router);

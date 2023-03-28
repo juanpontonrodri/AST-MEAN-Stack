@@ -5,6 +5,6 @@ Cargar varios pokemons : node cargarBD.js
 Eliminar pokemons: node eliminarBD.js
 
 Express 3000
-Angualr 4200
+Angular 4200
 
 
